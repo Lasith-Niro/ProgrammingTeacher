@@ -57,9 +57,10 @@ public class database_data_entry_initial_new extends Activity {
         //B
         mydb.insert_tag_que_assist(2,4);
         mydb.insert_tag_que_assist(2,5);
+        mydb.insert_tag_que_assist(2,6);
 
         //C
-        mydb.insert_tag_que_assist(3, 6);
+
         mydb.insert_tag_que_assist(3, 7);
         mydb.insert_tag_que_assist(3, 8);
         mydb.insert_tag_que_assist(3, 9);
@@ -168,36 +169,36 @@ public class database_data_entry_initial_new extends Activity {
         //Q1 - A
         mydb.insert_Question(
                 "1-Goto function",
-                "Using GOTO function increase your position to 9.",
+                "Using GOTO function increase your position to 3.",
                 "A","1,3","1","9","1","B","A"
         );
 
         // Q2 - B
         mydb.insert_Question(
                 "2-Goto function",
-                "Increase your score by one position.",
+                "Using GO function increase your position to 5.",
                 "B","4,5","9","10","9","C","B"
         );
 
         //Q3 -  C
         mydb.insert_Question(
                 "3-Operators",
-                "Increase your current position by 2.",
-                "C","6,7,12","10","12","9","D","B"
+                "Use GO function to change your position to 4.",
+                "C","7,11","10","12","9","D","B"
         );
 
         //Q4 - D
         mydb.insert_Question(
                 "4-Variables",
                 "Using predefined variable(s) increase your current position by 2.",
-                "D","15,13,20,13,21","12","14","12","E","D"
+                "D","21,13,17","12","14","12","E","D"
         );
 
         //Q5 - E
         mydb.insert_Question(
                 "5-Variables",
-                "Using Increment operator, increase your position by 1.",
-                "E","22,28","14","15","14","F","E"
+                "Use add operation and GO statement to increase your position by 3",
+                "E","26,27,24,23,22","14","15","14","F","E"
         );
 
         //Q6  - F
@@ -246,46 +247,46 @@ public class database_data_entry_initial_new extends Activity {
     public void insertData_tags(){
         //question 1 class - A
         mydb.insert_Tag("GOTO", "MAIN","None"); //id=1
-        mydb.insert_Tag("(8)", "VARIABLE","None"); //id=2
-        mydb.insert_Tag("(9)", "VARIABLE","None"); //id=3
+        mydb.insert_Tag("(5)", "VARIABLE","None"); //id=2
+        mydb.insert_Tag("(3)", "VARIABLE","None"); //id=3
         //answer - "1,3"
 
         //question 2 class - B
-        mydb.insert_Tag("GOTO", "MAIN","None"); //id=4
-        mydb.insert_Tag("(1_step_forward);", "VARIABLE","None"); //id=5
+        mydb.insert_Tag("GO", "MAIN","None"); //id=4
+        mydb.insert_Tag("(2_step_forward);", "VARIABLE","None"); //id=5
+        mydb.insert_Tag("(3_step_forward);", "VARIABLE","None"); //id=6
         //answer - "4,5"
 
         //question 3 class - C
-        mydb.insert_Tag("current_position = current_position " , "MAIN","None"); //id=6
-        mydb.insert_Tag( "+", "VARIABLE","None"); //id=7
-        mydb.insert_Tag( "3" , "VARIABLE","None"); //id=8
-        mydb.insert_Tag("GOTO", "VARIABLE","None"); //id=9
-        mydb.insert_Tag( "12" , "VARIABLE","None"); //id=10
-        mydb.insert_Tag( "5" , "VARIABLE","None"); //id=11
-        mydb.insert_Tag("2" , "VARIABLE","None"); //id=12
-        //answer - "6,7,12"
+        mydb.insert_Tag( "GO", "MAIN","None"); //id=7
+        mydb.insert_Tag( "(currentPosition - 1);" , "VARIABLE","None"); //id=8
+        mydb.insert_Tag("(2_step_forward);", "VARIABLE","None"); //id=9
+        mydb.insert_Tag( "(2_step_backward);" , "VARIABLE","None"); //id=10
+        mydb.insert_Tag( "(1_step_backward);" , "VARIABLE","None"); //id=11
+        mydb.insert_Tag("(4);" , "VARIABLE","None"); //id=12
+        //answer - "7,11"
 
         //question 4 class - D
-        mydb.insert_Tag("current_position" , "MAIN","None"); //id=13
-        mydb.insert_Tag("var1=1; \n", "MAIN","None"); //id=14
-        mydb.insert_Tag("var2=2; \n", "MAIN","None"); //id=15
-        mydb.insert_Tag("var3=3; \n", "MAIN","None"); //id=16
-        mydb.insert_Tag("-", "VARIABLE","None"); //id=17
-        mydb.insert_Tag("+2", "VARIABLE","None"); //id=18
-        mydb.insert_Tag("+ var3", "VARIABLE","None"); //id=19
-        mydb.insert_Tag("=", "VARIABLE","None"); //id=20
-        mydb.insert_Tag("+ var2", "VARIABLE","None"); //id=21
-        //answer "15, 13, 20, 13, 21"
+        mydb.insert_Tag("GO" , "MAIN","None"); //id=13
+        mydb.insert_Tag("var1=1; \n", "VARIABLE","None"); //id=14
+        mydb.insert_Tag("var2=2; \n", "VARIABLE","None"); //id=15
+        mydb.insert_Tag("var3=3; \n", "VARIABLE","None"); //id=16
+        mydb.insert_Tag("X_steps_forward", "MAIN","None"); //id=17
+        mydb.insert_Tag("(2_steps_forward)", "VARIABLE","None"); //id=18
+        mydb.insert_Tag("X=1", "VARIABLE","None"); //id=19
+        mydb.insert_Tag("X=3", "VARIABLE","None"); //id=20
+        mydb.insert_Tag("X=2", "VARIABLE","None"); //id=21
+        //answer "21,13,17"
 
         //question 5 class - E
-        mydb.insert_Tag("current_position" , "MAIN","None"); //id=22
-        mydb.insert_Tag("--", "VARIABLE","None"); //id=23
-        mydb.insert_Tag("*", "VARIABLE","None"); //id=24
-        mydb.insert_Tag("var1", "VARIABLE","None"); //id=25
-        mydb.insert_Tag("#", "VARIABLE","None"); //id=26
-        mydb.insert_Tag("-", "VARIABLE","None"); //id=27
-        mydb.insert_Tag("++", "VARIABLE","None"); //id=28
-        //answer - "22,28"
+        mydb.insert_Tag("(Y_steps_forward);" , "MAIN","None"); //id=22
+        mydb.insert_Tag("GO", "VARIABLE","None"); //id=23
+        mydb.insert_Tag("A+B\n", "VARIABLE","None"); //id=24
+        mydb.insert_Tag("(3_steps_forward)", "VARIABLE","None"); //id=25
+        mydb.insert_Tag("A=2,B=1", "VARIABLE","None"); //id=26
+        mydb.insert_Tag("Y = ", "VARIABLE","None"); //id=27
+        mydb.insert_Tag("A=2,B=2\n", "VARIABLE","None"); //id=28
+        //answer - "26,27,24,23,22"
 
         //question 6 class - F
         mydb.insert_Tag("current_position" , "MAIN","None"); //id=29

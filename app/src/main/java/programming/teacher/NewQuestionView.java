@@ -7,12 +7,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -231,6 +233,18 @@ public class NewQuestionView extends Activity {
         dialog_box.setCancelable(true);
         dialog_box.setTitle(title);
         dialog_box.setMessage(message);
+        /*
+        AlertDialog.Builder builder = new AlertDialog.Builder(TestKeyboard.this);
+            WebView view = new WebView(Fruits.this);
+            view.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+            builder.setView(view);
+            builder.create().show();
+            view.loadUrl("file:///android_asset/apple.gif");
+         */
+        //WebView view = new WebView(this);
+        //view.setLayoutParams(new DrawerLayout.LayoutParams(DrawerLayout.LayoutParams.WRAP_CONTENT, DrawerLayout.LayoutParams.WRAP_CONTENT));
+        //dialog_box.setView(view);
+        //view.loadUrl("file://app/src/main/res/drawable/gif_36_46.png");
         dialog_box.show();
     }
 
